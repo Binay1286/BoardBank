@@ -40,10 +40,6 @@
 		79E3FFC81E1D886A00EFD89F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		79ED560A1E1C5113006247D2 /* PlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		79ED560C1E1C53EC006247D2 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
-		B51FE542208EC50D002B4F36 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		B51FE544208EC553002B4F36 /* AddPlayerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerScreen.swift; sourceTree = "<group>"; };
-		B51FE546208EC56F002B4F36 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
-		B51FE548208EC5B4002B4F36 /* AddPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				79B78BF81E17E00900181778 /* BoardBank */,
-				B51FE539208EC4E3002B4F36 /* BoardBankUITests */,
 				79B78BF71E17E00900181778 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,25 +90,6 @@
 			);
 			name = BoardBank;
 			path = MonoBank;
-			sourceTree = "<group>";
-		};
-		B51FE539208EC4E3002B4F36 /* BoardBankUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B51FE54A208EC647002B4F36 /* screens */,
-				B51FE548208EC5B4002B4F36 /* AddPlayerTests.swift */,
-			);
-			path = BoardBankUITests;
-			sourceTree = "<group>";
-		};
-		B51FE54A208EC647002B4F36 /* screens */ = {
-			isa = PBXGroup;
-			children = (
-				B51FE546208EC56F002B4F36 /* SettingsScreen.swift */,
-				B51FE544208EC553002B4F36 /* AddPlayerScreen.swift */,
-				B51FE542208EC50D002B4F36 /* HomeScreen.swift */,
-			);
-			path = screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
