@@ -42,8 +42,8 @@ class AddPlayerTests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
         
         // Starting testing from clear state
-        homeScreen.settings()
-        settingsScreen.newGame()
+       // homeScreen.settings()
+      //  settingsScreen.newGame()
     }
     
     override func tearDown() {
@@ -54,6 +54,7 @@ class AddPlayerTests: XCTestCase {
     // MARK: Tests
     
     func testAddPlayerWithDefaultBalance() {
+        
         /**
          Add new Player with default balance and assert that added player is displayed on the Home Screen
          */
@@ -62,6 +63,27 @@ class AddPlayerTests: XCTestCase {
         addPlayerScreen.addPlayer()
         
         XCTAssertTrue(homeScreen.isPlayerDisplayed(name: testPlayerName1, balance: defaultPlayerBalance, currency: defaultCurrency))
+        
+        
+    }
+    
+    func testWithRecorder() {
+        
+        /**
+         Add new Player with default balance and assert that added player is displayed on the Home Screen
+         */
+        
+        let app = XCUIApplication()
+        homeScreen.addPlayer()
+        let tablesQuery = app.tables
+        
+        tablesQuery/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"BALANCE")/*[[".cells.containing(.staticText, identifier:\"$\")",".cells.containing(.staticText, identifier:\"BALANCE\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.children(matching: .textField).element.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Add Player"]/*[[".cells.staticTexts[\"Add Player\"]",".staticTexts[\"Add Player\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        
+    
+        
+     //XCTAssertTrue(homeScreen.isPlayerDisplayed(name: testPlayerName1, balance: defaultPlayerBalance, currency: defaultCurrency))
     }
     
     func testAddPlayerWithDefaultBalanceThenDelete() {

@@ -34,6 +34,7 @@ class AddPlayerScreen: XCTest {
     let balanceTextFieldLocator = XCUIApplication().textFields["1500"]
     let addPlayerButtonLocator = XCUIApplication().staticTexts["Add Player"]
     
+    
     // MARK: AddPlayerScreen Methods
     
     func setPlayerNameWith(_ name: String) {
@@ -67,7 +68,7 @@ class AddPlayerScreen: XCTest {
         /**
          Press Add button
          */
-        addPlayerButtonLocator.tap()
+        addPlayerButtonLocator.firstMatch.tap()
     }
     
 }
